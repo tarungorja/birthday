@@ -1,0 +1,50 @@
+.rd3t-label { translate: -100px 33px !important; }
+
+.rd3t-label__title {
+  fill: #000 !important;
+  stroke: none !important;
+  font-weight: $font-weight-medium !important;
+}
+
+.rd3t-label__attributes {
+  fill: #777 !important;
+  stroke: none !important;
+  font-weight:  $font-weight-medium !important;
+}
+
+.rd3t-node {
+  cursor: pointer !important;
+  fill: #777 !important;
+  stroke: #000 !important;
+  stroke-width: 1 !important;
+}
+
+.rd3t-link {
+  fill: none;
+  stroke: #111 !important;
+}
+
+.rd3t-leaf-node {
+  fill: $primary !important; /* Blue color for leaf nodes */
+  stroke: #000 !important;
+  stroke-width: 1px !important;
+}
+
+@keyframes ripple {
+  0% {
+    r: 15;
+    stroke-width: 0;
+    opacity: 1;
+  }
+  100% {
+    r: 25;
+    stroke-width: 2;
+    opacity: 0;
+  }
+}
+
+.ripple-effect {
+  animation: ripple 1.5s infinite;
+  stroke-width: 1px !important;
+  // stroke: blue;
+}

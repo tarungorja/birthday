@@ -1,0 +1,70 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600&display=swap');
+
+// Variables & Mixins
+@import "variables";
+@import "mixins";
+
+// Bootstrap Framework
+@import "bootstrap/scss/bootstrap";
+
+// Components
+@import "components/accordion";
+@import "components/avatars";
+@import "components/badge";
+@import "components/breadcrumbs";
+@import "components/buttons";
+@import "components/card";
+@import "components/dropdown";
+@import "components/images";
+@import "components/list-group";
+@import "components/markers";
+@import "components/modal";
+@import "components/nav";
+@import "components/offcanvas";
+@import "components/pagination";
+@import "components/popovers";
+@import "components/progress";
+@import "components/toasts";
+@import "components/tables";
+@import "components/forms";
+@import "components/HealthTracker";
+@import "components/safety";
+@import "components/AUC_PDF";
+@import "components/AUCPage";
+
+//common 
+@import "common/HealthViewPage";
+@import "common/signals";
+
+
+// Panels
+@import "panels/header";
+@import "panels/sidebar";
+@import "panels/sidebar-prime";
+@import "panels/main";
+
+// Apps
+@import "apps/batteryAssets";
+
+
+// Pages
+@import "pages/user";
+@import "pages/auth";
+@import "pages/error";
+@import "pages/other";
+@import "pages/docs";
+@import "pages/landing";
+
+
+// Utilities
+@import "utils";
+
+//plugins
+@import "plugins/scrollbar";
+
+// graph 
+@import "graph/tree";

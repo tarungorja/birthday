@@ -1,0 +1,122 @@
+.signals-list {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  .signal-item h6 {
+    font-size: smaller !important;
+  }
+
+  li {
+    display: flex;
+
+    +li {
+      margin-top: 10px;
+    }
+
+    .signal-title:hover {
+      text-decoration: underline;
+      color: $primary;
+    }
+
+    &.active {
+      .signal-date {
+        background-color: $primary;
+        color: #fff;
+      }
+
+      .signal-item {
+        border-left-color: $primary;
+        background-color: rgba($primary, .08);
+      }
+
+      .signal-item h6 {
+        color: $primary;
+      }
+    }
+  }
+}
+
+// .date-range {
+//   height: 6%;
+// }
+
+.date-range-picker {
+  width: 100px;
+}
+
+.signal-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 50px;
+  background-color: $gray-300;
+  color: $dark;
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-right: 15px;
+
+  small {
+    text-transform: uppercase;
+    display: block;
+    font-size: 10px;
+    font-weight: $font-weight-medium;
+    font-family: $ff-secondary;
+    letter-spacing: .5px;
+    opacity: .65;
+    color: inherit;
+    line-height: 1.2;
+  }
+
+  h5 {
+    font-size: 22px;
+    font-family: $ff-numerals;
+    font-weight: $font-weight-medium;
+    letter-spacing: -1px;
+    margin-bottom: 0;
+  }
+}
+
+.signals-body {
+  flex: 1;
+
+  .signal-item {
+    padding: 5px 10px;
+    background-color: $body-bg;
+    border-left: 2px solid $secondary;
+
+    +.signal-item {
+      margin-top: 2px;
+    }
+
+    small {
+      display: block;
+      font-family: $ff-numerals;
+      font-size: 11px;
+      margin-bottom: 1px;
+      color: $gray-500;
+    }
+
+    h6 {
+      color: $dark;
+      font-weight: $font-weight-semibold;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: $font-size-xs;
+      color: $secondary;
+      margin-bottom: 3px;
+      line-height: 1.4;
+    }
+  }
+}
+
+@media (max-width :1000px) {
+  .signals-container {
+    display: none;
+  }
+}

@@ -1,0 +1,121 @@
+.card-file,
+.card-folder {
+    .dropdown-file {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    .dropdown-link {
+        font-size: 16px;
+        color: $secondary;
+    }
+
+    .dropdown-item {
+        font-size: $font-size-sm;
+        padding-left: 8px;
+    }
+}
+
+.blockchain_background {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-file {
+    border-width: 0;
+    border-radius: 6px;
+    @include shadow-dreamy($gray-400);
+    padding: 10px;
+    position: relative;
+    height: 100%;
+
+    .card-file-icon {
+        width: 100%;
+        height: 120px;
+        background-color: $gray-200;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 48px;
+        border-radius: 3px;
+
+        &.danger {
+            color: $danger;
+            background-color: rgba($danger, .08);
+        }
+
+        &.primary {
+            color: $primary;
+            background-color: rgba($primary, .08);
+        }
+
+        &.info {
+            color: $info;
+            background-color: rgba($info, .08);
+        }
+
+        &.success {
+            color: $success;
+            background-color: rgba($success, .08);
+        }
+    }
+
+    .card-body {
+        padding: 0;
+        margin-top: 10px;
+
+        h6 {
+            margin-bottom: 5px;
+            font-size: $font-size-sm;
+
+            @include media-breakpoint-up(sm) {
+                font-size: $font-size-base;
+            }
+
+            a {
+                color: $dark;
+            }
+        }
+
+        span {
+            display: block;
+            font-size: $font-size-xs;
+            font-family: $font-family-sans-serif;
+            color: $secondary;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+    }
+
+    .card-footer {
+        background-color: transparent;
+        border-top-width: 0;
+        font-size: $font-size-xs;
+        font-family: $font-family-sans-serif;
+        padding: 0;
+        color: $secondary;
+    }
+}
+
+.pdf-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pdf-container {
+    height: 98%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+}

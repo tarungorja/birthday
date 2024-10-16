@@ -1,0 +1,287 @@
+.graph-info {
+  // position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  padding-bottom: 0 !important;
+  // @include gradient-y(#fff, rgba(255, 255, 255, 0));
+}
+
+.meta-info {
+  background-color: #F8F9FC;
+  white-space: nowrap;
+
+  .active {
+    background-color: $gray-300;
+    color: $gray-700;
+  }
+}
+
+
+
+.soh-value {
+  font-family: $ff-numerals;
+  font-size: 32px;
+  letter-spacing: -1px;
+  color: $dark;
+  text-indent: -2px;
+
+  @include media-breakpoint-up(xl) {
+    font-size: 40px;
+  }
+
+  span {
+    font-weight: 300;
+    color: $body-color;
+  }
+}
+
+.graph-subvalue {
+  display: flex;
+  align-items: center;
+  grid-gap: 3px;
+  font-size: 20px;
+
+  span {
+    font-family: $ff-numerals;
+    letter-spacing: -.2px;
+  }
+
+  small {
+    font-size: 18px;
+    font-weight: 400;
+    align-self: flex-end;
+    margin-bottom: .5px;
+    color: $body-color;
+  }
+}
+
+.nav-healthview-one {
+  display: flex;
+  justify-content: flex-end;
+  z-index: 10;
+  font-family: $ff-numerals;
+  font-size: $font-size-sm;
+
+  .dropdown-item {
+    margin-left: 0 !important;
+  }
+
+  .nav-link {
+    padding: 0 !important;
+  }
+
+  a {
+    color: $secondary;
+    letter-spacing: -.2px;
+
+    &.active {
+      font-weight: $font-weight-medium;
+      color: $primary;
+      text-decoration: underline;
+    }
+
+    +a {
+      margin-left: 10px;
+    }
+  }
+}
+
+
+.apex-chart-one {
+  position: relative;
+  left: 0px;
+}
+
+.card-one {
+  height: 100%;
+  border-width: 0;
+  border-radius: 6px;
+  @include shadow-dreamy($gray-400);
+
+  .card-header {
+    border-bottom-color: rgba($gray-300, .55);
+    background-color: transparent;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+
+    .card-title {
+      font-weight: $font-weight-semibold;
+      font-size: 15px;
+      color: $dark;
+      margin-bottom: 0;
+      line-height: 1.4;
+    }
+
+    .nav-icon {
+      margin-right: -4px;
+    }
+  }
+
+  .nav-icon {
+    .nav-link {
+      opacity: .6;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .nav-pills {
+    font-size: $font-size-sm;
+
+    .nav-link {
+      border-radius: 3px;
+      color: $secondary;
+      padding: 4px 15px;
+
+      &.active {
+        background-color: $gray-300;
+        color: $gray-700;
+      }
+    }
+  }
+
+  .card-body {
+    padding: 15px;
+    position: relative;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      width: 2px;
+      height: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px #F5F5F5;
+      border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #D0D4CA;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: #D0D4CA;
+    }
+  }
+
+  small {
+    color: $secondary;
+    font-family: $font-family-sans-serif;
+    font-size: 12px;
+  }
+
+  .legend {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 1.25;
+
+    li {
+      display: inline-flex;
+      align-items: center;
+      position: relative;
+      font-size: $font-size-xs;
+
+      &::before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        border-radius: 100%;
+        margin-right: 5px;
+      }
+
+      +li {
+        margin-left: 10px;
+      }
+
+      &:first-child::before {
+        background-color: #506fd9;
+      }
+
+      &:nth-child(2)::before {
+        background-color: #dbdffd;
+      }
+
+      &:last-child::before {
+        background-color: #85b6ff;
+      }
+    }
+  }
+
+  .card-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 4px;
+
+    i {
+      font-size: 24px;
+      line-height: 1;
+    }
+  }
+
+  .people-item {
+    padding: 10px 15px;
+
+    +.people-item {
+      margin-top: 0;
+      border-top: 1px solid $gray-200;
+    }
+
+    .avatar {
+      margin-right: 8px;
+    }
+
+    .nav-link+.nav-link {
+      margin-left: 5px;
+    }
+  }
+
+  .card-footer {
+    padding: 15px;
+    background-color: transparent;
+    border-top-color: $gray-200;
+  }
+
+  .list-group-item {
+    border-color: $gray-200;
+  }
+
+  .card-value {
+    font-family: $ff-numerals;
+    font-weight: $font-weight-medium;
+    color: $dark;
+    display: flex;
+    align-items: center;
+    grid-gap: 2px;
+    letter-spacing: -.2px;
+
+    span {
+      font-weight: 400;
+    }
+
+    i {
+      margin-right: 5px;
+      text-indent: -3px;
+      color: $primary;
+    }
+  }
+
+}
+
+@media (max-width : 1000px) {
+  .visible {
+    display: none;
+  }
+}

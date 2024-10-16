@@ -1,0 +1,92 @@
+ .signal-tree-carousel .gd-carousel-wrapper {
+    position: relative;
+  }
+
+  .signal-tree-carousel .carousel-control-prev-icon {
+    position: absolute;
+    left: 0;
+    top: 30%;
+  }
+
+  // .signal-tree-carousel .carousel-indicators {
+  //   // display: none;
+  // }
+
+  .signal-tree-carousel .carousel-control-next-icon {
+    position: absolute;
+    right: 0;
+    top: 30%;
+  }
+
+  .signal-tree-carousel .carousel-control-prev,
+  .signal-tree-carousel .carousel-control-next {
+    opacity: 0;
+    /* Initially hide the buttons */
+    transition: opacity 0.3s;
+    /* Add a smooth transition effect */
+  }
+
+  .signal-tree-carousel:hover .carousel-control-prev,
+  .signal-tree-carousel:hover .carousel-control-next {
+    opacity: 1;
+    /* Show the buttons on hover */
+  }
+
+  .prev-icon, .next-icon {
+    width: 35px; /* Set the desired width for the icon container */
+    height: 35px; /* Set the desired height for the icon container */
+    background-size: contain; /* Ensures the image fits within the container */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image */
+    cursor: pointer; /* Changes the cursor to indicate it's clickable */
+  }
+    
+  
+  .next-icon {
+    /* change fill="currentColor" to %23fff to make it white  */
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-arrow-right-circle" viewBox="0 0 16 16"%3E%3Cpath fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/%3E%3C/svg%3E');
+  }
+
+  .prev-icon {
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-arrow-left-circle" viewBox="0 0 16 16"%3E%3Cpath fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/%3E%3C/svg%3E');
+
+  }
+
+  .scrollable-container {
+    width: 100%;
+    height: 50vh; /* Adjust as needed */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent line breaks */
+    // scroll-behavior: smooth; /* Enable smooth scrolling */
+  }
+
+/* Scrollable container styles */
+.scrollable-container {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-y: hidden; /* Hide vertical scrolling */
+  height: 50vh; /* Adjust height as needed */
+}
+
+/* Webkit-based browsers */
+.scrollable-container::-webkit-scrollbar {
+  height: 8px; /* Thin horizontal scrollbar height */
+}
+
+.scrollable-container::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track background */
+}
+
+.scrollable-container::-webkit-scrollbar-thumb {
+  background: #888; /* Scrollbar thumb color */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.scrollable-container::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker thumb color on hover */
+}
+
+/* Firefox */
+.scrollable-container {
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: #888 #f1f1f1; /* Thumb and track color */
+}

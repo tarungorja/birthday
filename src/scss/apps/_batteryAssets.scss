@@ -1,0 +1,106 @@
+.battery-asset {
+  position: relative;
+
+  // .battery-assets:hover {
+  //   text-decoration: underline;
+  //   color : $primary;
+  // }
+  .battery-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 4px;
+    @include transition(all 0.25s);
+
+    &:hover {
+      background-color: $gray-200;
+      cursor: pointer;
+    }
+
+    +.battery-item {
+      margin-top: 1px;
+    }
+
+    &.unread {
+      .battery-item-body h6 {
+        font-weight: $font-weight-semibold;
+        position: relative;
+        letter-spacing: -.2px;
+      }
+
+      .battery-item-body span {
+        font-weight: $font-weight-medium;
+        color: grey;
+      }
+    }
+
+    &.selected {
+      background-color: rgba($primary, .1);
+
+      .avatar-initial {
+        background-color: $primary;
+        color: #fff;
+      }
+
+      .battery-item-body h6 {
+        color: $primary;
+      }
+    }
+  }
+
+  .avatar-initial {
+    background-color: $gray-400;
+    color: $body-color;
+  }
+
+  .battery-item-body {
+    padding-left: 10px;
+    flex: 1;
+    width: calc(100% - 46px);
+
+    h6 {
+      color: $dark;
+      margin-bottom: 2px;
+    }
+
+    span {
+      display: block;
+      font-size: $font-size-xs;
+      color: $secondary;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    strong {
+      font-weight: $font-weight-semibold;
+    }
+
+    small {
+      font-size: 11px;
+      font-family: $font-family-sans-serif;
+      color: $secondary;
+    }
+
+  }
+}
+
+.toggleBatterySelection:hover {
+  cursor: pointer;
+}
+
+@media (max-width :1000px) {
+  .battery-asset-container {
+    display: none;
+  }
+
+  .feeds-container {
+    width: 100%;
+  }
+}
+
+// .assets-hover:hover {
+//   text-decoration: underline;
+//   // color : white;
+// }
